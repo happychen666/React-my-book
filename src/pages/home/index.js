@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {connect} from 'react-redux';
 
 import Topic from './components/Topic';
@@ -13,9 +13,9 @@ import {
     BackTop
 } from './style';
 
-class Home extends Component {
+class Home extends PureComponent {
     render() {
-        const {topicList} = this.props;
+        const {topicList,showScroll} = this.props;
         return (
             <HomeWrapper>
                 <HomeLeft>
@@ -27,24 +27,42 @@ class Home extends Component {
                     <Recommend />
                     <Writer />
                 </HomeRight>
-                <BackTop></BackTop>
+                {showScroll?<BackTop onClick={this.handleScrollTop}></BackTop>:null}
             </HomeWrapper>
         )
     }
     componentDidMount(){
         this.props.changeHomeData();
+        this.bindEvents();
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('scroll',this.props.changeScrollTopShow);
+    }
+    handleScrollTop(e){
+        window.scrollTo(0,0);
+    }
+    bindEvents(){
+        window.addEventListener('scroll',this.props.changeScrollTopShow);
     }
 }
 
-// const mapStateToProps = (state)=>({
-//     topicList: state.getIn(['home','topicList']),
-//     articleList: state.getIn(['home','articleList']),
-//     recommendList: state.getIn(['home','recommendList'])
-// })
+const mapStateToProps = (state)=>({
+    showScroll: state.getIn(['home','showScroll'])
+})
 
 const mapDispatchToProps = (dispatch)=>({
     changeHomeData(){
         dispatch(actionCreators.change_home_data());
+    },
+    changeScrollTopShow(){
+        console.log(document.documentElement.scrollTop)
+        if(document.documentElement.scrollTop>200){
+            dispatch(actionCreators.changeScrollTopShow(true))
+        }else{
+            dispatch(actionCreators.changeScrollTopShow(false))
+        }
+        
     }
 })
-export default connect(null,mapDispatchToProps)(Home);
+export default connect(mapStateToProps,mapDispatchToProps)(Home);

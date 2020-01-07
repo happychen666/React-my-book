@@ -1,10 +1,11 @@
 import { fromJS } from 'immutable';
-import { CHANGE_HOME_DATA, GET_MORE_LIST } from './actionTypes';
+import { CHANGE_HOME_DATA, GET_MORE_LIST,CHANGE_SCROLL_TOP } from './actionTypes';
 
 const defaultState = fromJS({
     topicList: [],
     articleList: [],
     recommendList: [],
+    showScroll:false,
     articlePage:1
 })
 
@@ -21,6 +22,8 @@ export default (state = defaultState, action) => {
                 articleList:state.get('articleList').concat(fromJS(action.list)),
                 articlePage:action.nextPage
             })
+        case CHANGE_SCROLL_TOP:
+            return state.set('showScroll',action.show)
     }
     return state;
 }

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CHANGE_HOME_DATA, GET_MORE_LIST } from './actionTypes';
+import { CHANGE_HOME_DATA, GET_MORE_LIST,CHANGE_SCROLL_TOP } from './actionTypes';
 
 const home_data = (topicList, articleList, recommendList) => ({
     type: CHANGE_HOME_DATA,
@@ -31,3 +31,8 @@ export const getMoreList = (page) => {
         })
     }
 }
+
+export const changeScrollTopShow = (show)=>({
+    type:CHANGE_SCROLL_TOP,
+    show
+})

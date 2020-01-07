@@ -105,5 +105,27 @@ export const LoadMore = styled.div`
 `
 
 export const BackTop = styled.div`
-   
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #8c8c8c;
+    font-size: 18px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.2);
+    background-color: #fff;
+    cursor:pointer;
+    :before{
+        position:absolute;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 15px solid #CCCCCC;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
 `
