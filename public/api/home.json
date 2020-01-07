@@ -1,42 +1,71 @@
 {
 	"success": true,
 	"data": {
-		"topicList": [{
-			"id": 1,
-			"title": "社会热点",
-			"imgUrl": "//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
-		}, {
-			"id": 2,
-			"title": "手手绘",
-			"imgUrl": "//upload.jianshu.io/collections/images/21/20120316041115481.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
-		}],
-		"articleList": [{
-			"id": 1,
-			"title": "胡歌12年后首谈车祸",
-			"desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
-			"imgUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
-		}, {
-			"id": 2,
-			"title": "胡歌12年后首谈车祸：既然活下来了，就不能白白活着",
-			"desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
-			"imgUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
-		}, {
-			"id": 3,
-			"title": "胡歌12年后首谈车祸：既然活下来了，就不能白白活着",
-			"desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
-			"imgUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
-		}, {
-			"id": 4,
-			"title": "胡歌12年后首谈车祸：既然活下来了，就不能白白活着",
-			"desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
-			"imgUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
-		}],
-		"recommendList": [{
-			"id": 1,
-			"imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
-		}, {
-			"id": 2,
-			"imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
-		}]
+		"topicList": [
+			{
+				"id": 1,
+				"title": "社会热点",
+				"imgUrl": "http://m.imeitou.com/uploads/allimg/2019111010/siaz3nfqyqs.jpeg"
+			},
+			{
+				"id": 2,
+				"title": "图形算法",
+				"imgUrl": "https://hbimg.huabanimg.com/4f21e4dad9975eb54a617667fdcf5e2d4c751e5b1a508-OPVCEJ_fw658"
+			},
+			{
+				"id": 3,
+				"title": "人工智能",
+				"imgUrl": "https://hbimg.huabanimg.com/6eaeb59fc861852179f3ee7c223c1c03aaf68b6c390ea-HPVtYI_fw658"
+			},
+			{
+				"id": 4,
+				"title": "前端开发",
+				"imgUrl": "https://hbimg.huabanimg.com/d139b6e6842fed4c868a9b36ab489d9b65e5c51729988-EQHLRQ_fw658"
+			}
+		],
+		"articleList": [
+			{
+				"id": 1,
+				"title": "2019年中国化妆品行业市场现状及发展趋势分析 化妆品“他经济”到来，男人也爱美",
+				"desc": "在过去很长一段时间里，男性都是庞大的中国化妆品市场一个可有可无的角色。但近几年，中国市场涌现出众多的男性化妆品品牌。高端百货店有碧欧泉、兰蔻、倩碧、资生堂、娇韵诗、薇姿、迪奥等...",
+				"imgUrl": "https://hbimg.huabanimg.com/8a65dd1848dfec26bf12df1b9b067a1060faca7fb13d-fMrV8w_fw658"
+			},
+			{
+				"id": 2,
+				"title": "2012-2018年中国网约车交易规模统计及增长情况",
+				"desc": "2019年中国网约车行业市场现状及发展趋势分析 传统车企竞相布局将进入多元化时代,阿里在出行市场发力已久，此前投资的哈啰出行、永安行、滴滴出行、高德软件、小鹏汽车等等，这些已经成为出行市场细分领域的头部企业。...",
+				"imgUrl": "https://hbimg.huabanimg.com/cbd5dbe9aa796dc78602b6da15ba3b1b5ee76b7239997-Elj51q_fw658"
+			},
+			{
+				"id": 3,
+				"title": "2019年中国建筑行业市场竞争格局分析 特、一级资质企业对行业发展贡献明显",
+				"desc": "截至2019年上半年，全国共有建筑业企业单位数92733个，比2018年同期增加6740个，增长7.84%。其中，国有及国有控股建筑业企业6490个，比2018年同期减少12个，占建筑业企业总数的7.00%。...",
+				"imgUrl": "https://hbimg.huabanimg.com/b5c2af882b27ef8b4d362a555804327d54139dc0f7775-kUEMY8_fw658"
+			},
+			{
+				"id": 4,
+				"title": "2019年人脸识别技术行业发展现状 3D人脸识别技术将成未来趋势",
+				"desc": "人脸识别技术在中国的发展起步于上世纪九十年代末，经历了技术引进-专业市场导入-技术完善-技术应用-各行业领域使用等五个阶段。其中，2014年是深度学习应用于人脸识别的关键一年，该年FaceBook发表一篇名为“Deep Face系统：...",
+				"imgUrl": "https://hbimg.huabanimg.com/fb3e2ef2a9ed107411f261c54b164128413503ef459e5a-6yH9xq_fw658"
+			}
+		],
+		"recommendList": [
+			{
+				"id": 1,
+				"imgUrl": "https://hbimg.huabanimg.com/10f8c9b9a654dd9236062ce75517105a5142d85f107a17-mGbXVn_fw658"
+			},
+			{
+				"id": 2,
+				"imgUrl": "https://hbimg.huabanimg.com/559007d08a367beea52cd5fdd1ea7439fcee0d7ff9fca-ZoNwPN_fw658"
+			},
+			{
+				"id": 3,
+				"imgUrl": "https://hbimg.huabanimg.com/f2525bbdea8be8c8161c7670fa80bedac2e3f5ab56d7f-XOJYco_fw658"
+			},
+			{
+				"id": 4,
+				"imgUrl": "https://hbimg.huabanimg.com/ce6107a921ae1bdf90e6cbaa50246c5ac21602b1cc756-cga88W_fw658"
+			}
+		]
 	}
 }

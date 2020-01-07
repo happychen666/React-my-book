@@ -1,27 +1,34 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
     TopicWrapper,
     TopicItem
-}from '../style';
-class Topic extends Component{
-    render(){
-        return (
+} from '../style';
+class Topic extends Component {
+    render() {
+        const { list } = this.props;
 
+        return (
             <TopicWrapper>
-                <TopicItem>
-                    <img className="topic-pic" src="http://m.imeitou.com/uploads/allimg/2019111010/siaz3nfqyqs.jpeg"/>社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img className="topic-pic" src="http://m.imeitou.com/uploads/allimg/2019111010/siaz3nfqyqs.jpeg"/>社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img className="topic-pic" src="http://m.imeitou.com/uploads/allimg/2019111010/siaz3nfqyqs.jpeg"/>社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img className="topic-pic" src="http://m.imeitou.com/uploads/allimg/2019111010/siaz3nfqyqs.jpeg"/>社会热点
-                </TopicItem>
+                {
+                    list.map((item) => {
+                        return (
+                            <TopicItem key={item.get('id')}>
+                                <img className="topic-pic" src={item.get('imgUrl')} />{item.get('title')}
+                            </TopicItem>
+                        )
+                    })
+                }
             </TopicWrapper>
         )
     }
 }
-export default Topic;
+
+const mapStateToProps = (state) => ({
+    list: state.getIn(['home', 'topicList'])
+}
+)
+// const mapDispatchToProps = (dispatch) => ({
+
+// })
+export default connect(mapStateToProps, null)(Topic);
