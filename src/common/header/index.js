@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
+import { actionCreators as loginActionCreators } from '../../pages/login/store';
 import { toJS } from 'immutable';
 
 import {
@@ -26,7 +27,7 @@ class Header extends PureComponent {
         super(props);
     }
     render() {
-        const { focused,list, handleInputFocus, handleInputBlur } = this.props;
+        const { loginStatus, focused, list, logout, handleInputFocus, handleInputBlur } = this.props;
         return (
             <HeaderWrapper>
                 <Logo />
@@ -36,7 +37,10 @@ class Header extends PureComponent {
                     <NavItem className="right">
                         <i className="iconfont">&#xe636;</i>
                     </NavItem>
-                    <NavItem className="right">登录</NavItem>
+                    {loginStatus ?
+                        <NavItem className="right logout" onClick={logout}>退出</NavItem> :
+                        <Link to='/login'> <NavItem className="right" >登录</NavItem></Link>
+                    }
                     <SearchWrapper>
                         <CSSTransition
                             timeout={200}
@@ -44,7 +48,7 @@ class Header extends PureComponent {
                             classNames="slide">
                             <NavSearch
                                 className={focused ? 'focused' : ''}
-                                onFocus={()=>{handleInputFocus(list)}}
+                                onFocus={() => { handleInputFocus(list) }}
                                 onBlur={handleInputBlur}
                             ></NavSearch>
                         </CSSTransition>
@@ -53,8 +57,10 @@ class Header extends PureComponent {
                     </SearchWrapper>
                 </Nav>
                 <Addition>
-                    <Button className="writing"><i className="iconfont">&#xe678;</i>写文章</Button>
-                    <Button className="reg">注册</Button>
+                    <Link to='/write'> <Button className="writing"><i className="iconfont">&#xe678;</i>写文章</Button></Link>
+                    {
+                        loginStatus ? '' : <Button className="reg">注册</Button>
+                    }
                 </Addition>
             </HeaderWrapper>
         )
@@ -96,14 +102,15 @@ const mapStateToProps = (state) => {
         mouseIn: state.get('header').get('mouseIn'),
         list: state.getIn(['header', 'list']),
         page: state.getIn(['header', 'page']),
-        totalPage: state.getIn(['header', 'totalPage'])
+        totalPage: state.getIn(['header', 'totalPage']),
+        loginStatus: state.getIn(['login', 'loginStatus'])
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         handleInputFocus(list) {
-            if(list.size==0){
+            if (list.size == 0) {
                 dispatch(actionCreators.getList());
             }
             dispatch(actionCreators.searchFocus());
@@ -133,6 +140,9 @@ const mapDispatchToProps = (dispatch) => {
                 page = 1;
             }
             dispatch(actionCreators.changePage(page))
+        },
+        logout() {
+            dispatch(loginActionCreators.logout());
         }
     }
 }

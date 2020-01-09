@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import logoPic from '../../static/nav-logo.png';
 export const HeaderWrapper = styled.div`
+    z-index:50;
     position:relative;
     height:56px;
     border-bottom:1px solid #f0f0f0;
@@ -41,6 +42,9 @@ export const NavItem = styled.div`
     }
     &.active{
         color:#ea6f5a;
+    }
+    &.logout{
+        cursor:pointer;
     }
 `
 export const SearchWrapper = styled.div`
@@ -159,9 +163,14 @@ export const Button = styled.div`
     font-size:14px;
     &.reg{
         color:#ec6149;
+        cursor:pointer;
     }
     &.writing{
         color:#fff;
         background:#ec6149;
+        cursor:pointer;
+        .iconfont{
+            margin-right:4px;
+        }
     }
 `
