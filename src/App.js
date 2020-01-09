@@ -18,6 +18,7 @@ class App extends PureComponent {
           <Header />
           <Route path='/' exact component={Home}></Route>
           <Route path='/login' exact component={Login}></Route>
+          {/* 此时loadbale这个组件可以获取路由信息，因为它直接挂在Route这个组件上的 */}
           <Route path='/detail/:id' exact  component={Detail}></Route>
           <Route path='/write' exact component={Write}></Route>
           <GlobalStyled />

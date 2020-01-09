@@ -36,4 +36,6 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(actionCreators.getDetail(id));
     }
 })
+
+//withRouter方法让异步组件Detail有能力获取router组件中的路由信息
 export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Detail));
